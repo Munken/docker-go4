@@ -15,7 +15,7 @@ RUN mkdir /source \
   && rm -rf $GO4_DIR/Go4*/*.[do] $GO4_DIR/Go4*/*.cxx
 
 
-ENV GO4SYS=/source/go4-5.1.2
-ENV PATH=/source/go4-5.1.2/bin:$PATH
-ENV PYTHONPATH=/source/go4-5.1.2/python:$PYTHONPATH
-ENV LD_LIBRARY_PATH=.:/source/go4-5.1.2/lib:$LD_LIBRARY_PATH
+ENV GO4SYS=$GO4_DIR
+ENV PATH=$GO4_DIR/bin:$PATH
+ENV PYTHONPATH=$GO4_DIR/python:$PYTHONPATH
+ENV LD_LIBRARY_PATH=.:$GO4_DIR/lib:$LD_LIBRARY_PATH
